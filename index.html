@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Color Changer</title>
+
+
+    <style>
+    .button{
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 5px;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    #greeninfo{
+      display: none;
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>JavaScript</h1>
+    <div class="button" id='green-button'>Go Green!</div>
+    <div class="button" id='red-button'>Go Red!</div>
+    <div id='greeninfo'>
+      Hey! you just picked the green template. 10% better power effiency.
+    </div>
+
+    <script>
+    document.getElementById('green-button').onclick= greenPressed;
+    document.getElementById('red-button').onclick= redPressed;
+
+    function greenPressed(){
+      // alert('green was pressed')
+      document.body.style.backgroundColor = 'green';
+      document.getElementById('greeninfo').style.display='block';
+    }
+
+    function redPressed(){
+      alert('red was pressed')
+      document.body.style.backgroundColor = 'red';
+    }
+
+
+
+    </script>
+  </body>
+</html>
